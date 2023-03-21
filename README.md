@@ -13,4 +13,4 @@ Assign a keyboard shortcut in Nova’s settings. The author uses `mash-r` (`cmd-
 
 ## License, Copyright, Attributions
 
-Copyright 2023 Erik Hanson. See [LICENSE](LICENSE).
+Copyright 2023 Erik Hanson. See [LICENSE](https://github.com/eahanson/open-recent.novaextension/blob/main/LICENSE).
