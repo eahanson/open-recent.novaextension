@@ -1,18 +1,16 @@
 {
-  "identifier": "eahanson.OpenRecent",
+  "activationEvents": ["*"],
+  "bugs": "https://github.com/eahanson/open-recent.novaextension/issues",
+  "categories": ["commands"],
+  "commands": { "extensions": [{ "title": "Open Recent…", "command": "open-recent.show-recent" }] },
+  "config": [],
+  "description": "Open a document from a list of recent documents",
+  "entitlements": {},
+  "homepage": "https://github.com/eahanson/open-recent.novaextension/",
+  "identifier": "eahanson.open-recent",
+  "main": "main.js",
   "name": "Open Recent",
   "organization": "Erik Hanson",
-  "description": "Open a document from a list of recent documents",
-  "version": "1.0",
-  "categories": ["commands"],
-  "main": "main.js",
-  "activationEvents": ["*"],
-  "entitlements": {},
-  "commands": {
-    "extensions": [{
-      "title": "Open Recent…",
-      "command": "open-recent.show-recent"
-    }]
-  },
-  "config": []
+  "repository": "https://github.com/eahanson/open-recent.novaextension/",
+  "version": "1.0"
 }
