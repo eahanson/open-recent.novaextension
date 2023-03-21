@@ -1,0 +1,18 @@
+{
+  "identifier": "eahanson.OpenRecent",
+  "name": "Open Recent",
+  "organization": "Erik Hanson",
+  "description": "Open a document from a list of recent documents",
+  "version": "1.0",
+  "categories": ["commands"],
+  "main": "main.js",
+  "activationEvents": ["*"],
+  "entitlements": {},
+  "commands": {
+    "extensions": [{
+      "title": "Open Recent…",
+      "command": "open-recent.show-recent"
+    }]
+  },
+  "config": []
+}
