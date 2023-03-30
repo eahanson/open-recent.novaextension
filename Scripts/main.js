@@ -8,18 +8,13 @@ exports.deactivate = function() {
 }
 
 nova.commands.register("open-recent.show-recent", (workspace) => {
-  workspace.showChoicePalette(editorPaths(), {}, (name, index) => openEditor(index));
+  workspace.showChoicePalette(editorPaths(), {}, (name, index) => openEditor(index))
 });
 
 // // //
 
-function trackEditor(newEditor) {
-  const index = textEditors.indexOf(newEditor);
-  if (index !== -1) {
-    textEditors.splice(index, 1);
-  }
-  textEditors.unshift(newEditor);
-  textEditors.length = Math.min(textEditors.length, 100);
+function editorPaths() {
+  return textEditors.map((editor) => relativePath(editor))
 }
 
 function openEditor(index) {
@@ -30,6 +25,25 @@ function openEditor(index) {
   }
 }
 
-function editorPaths() {
-  return textEditors.map((editor) => nova.workspace.relativizePath(editor.document.path))
+function relativePath(editor) {
+  return nova.workspace.relativizePath(editor.document.path)
+}
+
+function removeDuplicateEditors() {
+  const seen = new Set();
+  textEditors = textEditors.filter(editor => {
+    const key = relativePath(editor)
+    if (seen.has(key)) {
+      return false
+    } else {
+      seen.add(key)
+      return true
+    }
+  })
+}
+
+function trackEditor(newEditor) {
+  textEditors.unshift(newEditor)
+  removeDuplicateEditors()
+  textEditors.length = Math.min(textEditors.length, 100);
 }
