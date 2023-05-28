@@ -1,3 +1,7 @@
+## Version 1.0.3
+
+Documentation updates.
+
 ## Version 1.0.2
 
 Remove duplicates from list of recent editors.
