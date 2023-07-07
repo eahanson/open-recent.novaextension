@@ -51,6 +51,10 @@ Assign a keyboard shortcut in Nova’s settings. The author uses `mash-r` (`cmd-
   [GitHub](https://github.com/eahanson/smart-sort-lines) /
   [website](https://extensions.panic.com/extensions/eahanson/eahanson.smart-sort-lines/)
 
+- **Trail** lets you create a trail of editor positions as you navigate code so that you can easily get back to where
+  you came from.
+  [GitHub](https://github.com/eahanson/trail.novaextension) /
+  [website](https://extensions.panic.com/extensions/eahanson/eahanson.trail/)
 
 ## License, Copyright, Attributions
 
